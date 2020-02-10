@@ -6,13 +6,12 @@ public class ArmstrongChecker {
         int remainder;
         int originalNumber = number;
 
-
-        while (number != 0) {
-            remainder = number % 10;
+        while (originalNumber != 0) {
+            remainder = originalNumber % 10;
             result = result + (remainder * remainder * remainder);
-            number = number / 10;
+            originalNumber = originalNumber / 10;
         }
-        if (result == originalNumber) {
+        if (result == number) {
             System.out.println(number + " is an Armstrong number.");
             return true;
         } else {
